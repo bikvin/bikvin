@@ -25,3 +25,48 @@ model User {
   email    String
   password String
 }
+
+model PortfolioItem {
+  id           String   @id @default(cuid())
+  fileNamesArr String
+  heading      String
+  liveLink     String?
+  order        Int?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Many-to-Many Relation with Features
+  features         Feature[]        @relation("PortfolioFeatures")
+  technologiesUsed TechnologyUsed[] @relation("PortfolioTechnologies")
+  roles            Role[]           @relation("PortfolioRoles")
+}
+
+model Feature {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Many-to-Many Relation with Portfolio Items
+  portfolioItems PortfolioItem[] @relation("PortfolioFeatures")
+}
+
+model TechnologyUsed {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Many-to-Many Relation with Portfolio Items
+  portfolioItems PortfolioItem[] @relation("PortfolioTechnologies")
+}
+
+model Role {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Many-to-Many Relation with Portfolio Items
+  portfolioItems PortfolioItem[] @relation("PortfolioRoles")
+}

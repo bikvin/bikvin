@@ -45,16 +45,18 @@ export default function TopMenu() {
   return (
     <header className="relative  px-8">
       <div className="relative z-[2] flex flex-col md:flex-row justify-between max-w-screen-lg mx-auto">
-        <div className="flex items-center gap-4">
-          <Image
-            src={"/img/logo/logo-nav.png"}
-            width={25}
-            height={32}
-            alt="Logo"
-          />
-          <h3 className="font-baskerville md:text-[1.5em] font-bold my-4">
-            Bikvin
-          </h3>
+        <div>
+          <Link href={"/"} className="flex items-center gap-2">
+            <Image
+              src={"/img/logo/logo.png"}
+              width={30}
+              height={30}
+              alt="Logo"
+            />
+            <h3 className="font-baskerville md:text-[1.5em] font-bold my-4">
+              Bikvin
+            </h3>
+          </Link>
         </div>
         <RxHamburgerMenu
           onClick={clickHandler}
@@ -66,18 +68,18 @@ export default function TopMenu() {
           style={{ maxHeight: isMobile && isMounted ? maxHeight : undefined }} // Only apply maxHeight on mobile
         >
           <li className="text-center pb-2 md:pb-0   hover:text-black transition-colors ease-in delay-200 text-[1.2em] text-gray1">
-            <Link href="#about">Services</Link>
+            <Link href="/#whatIdo">Services</Link>
           </li>
           <li className="text-center pb-2 md:pb-0  hover:text-black transition-colors ease-in delay-200  text-[1.2em] text-gray1">
-            <Link href="#help">Technologies</Link>
+            <Link href="/#technologies">Technologies</Link>
           </li>
 
           <li className="text-center pb-2 md:pb-0  hover:text-black transition-colors ease-in delay-200   text-[1.2em] text-gray1">
-            <Link href="#contacts">Contact</Link>
+            <Link href="/#contacts">Contact</Link>
           </li>
 
           <li className="text-center md:text-left mt-4 mb-8 md:m-0">
-            <LinkButton href="#">Portfolio</LinkButton>
+            <LinkButton href="/#portfolio">Portfolio</LinkButton>
           </li>
         </ul>
       </div>

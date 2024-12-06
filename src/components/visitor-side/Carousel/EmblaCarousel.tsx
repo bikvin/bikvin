@@ -51,8 +51,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 className={`${classes.embla__slide__number} border  bg-white rounded-[11px]`}
               >
                 <Image
-                  // src={`${process.env.NEXT_PUBLIC_AWS_S3_BUCKET_PROTOCOL}://${process.env.NEXT_PUBLIC_AWS_S3_BUCKET_LINK}/projects/${item.name}`}
-                  src={`/img/portfolio/kuzmina-psy/${item.name}`}
+                  src={`${process.env.NEXT_PUBLIC_AWS_S3_BUCKET_PROTOCOL}://${process.env.NEXT_PUBLIC_AWS_S3_BUCKET_LINK}/images/${item.name}`}
+                  // src={`/img/portfolio/kuzmina-psy/${item.name}`}
                   fill={true}
                   alt=""
                   style={{ objectFit: "contain" }}

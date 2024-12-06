@@ -3,7 +3,7 @@ import DoItem from "./DoItem";
 
 export default function WhatIDoSection() {
   return (
-    <section className="relative w-full md:min-h-screen\">
+    <section className="relative w-full " id="whatIdo">
       <div className="relative flex gap-10 flex-col md:flex-row justify-between md:max-w-screen-lg mx-auto"></div>
 
       <div className="flex flex-col md:flex-row py-20 md:py-40 md:max-w-screen-lg mx-auto">

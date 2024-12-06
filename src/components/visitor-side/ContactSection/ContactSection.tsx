@@ -5,7 +5,7 @@ import { TiMail } from "react-icons/ti";
 
 export default function ContactSection() {
   return (
-    <section className="bg-violet3 text-white">
+    <section className="bg-violet3 text-white" id="contacts">
       <div className="py-20 md:py-20 md:max-w-screen-lg mx-auto px-8">
         <h1 className="section-header mb-16">Contact Me.</h1>
         <div className="flex justify-center">

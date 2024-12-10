@@ -34,7 +34,7 @@ export default function HeroSection() {
               experiences and bringing ideas to life on the web.
             </p>
             <div className="text-center md:text-left">
-              <LinkButton href="" sizeRatio={1.2}>
+              <LinkButton href="/#portfolio" sizeRatio={1.2}>
                 My portfolio
               </LinkButton>
             </div>
